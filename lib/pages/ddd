@@ -1,0 +1,66 @@
+   ListTile(
+               
+                
+                leading:Container(
+                  
+                  child: Image.asset(
+                    "assets/images/din.jpg"
+                         
+                            ),
+                ),
+                title: Column(children: <Widget>[
+                  Text(widget.list[i]['title']),
+                  Padding(padding: EdgeInsets.only(bottom: 25.0),)
+                ],),
+                subtitle: Row(children: <Widget>[
+                         Expanded(
+                           child:  Text(widget.list[i]['category']),
+                           ),
+
+                         Expanded(
+                           child: Row(
+                             children: <Widget>[
+                           Icon(Icons.remove_red_eye,color: Colors.grey,),
+
+                         Padding(
+                           padding: EdgeInsets.only(left:10),
+                           child: Text(widget.list[i]['views']),
+                           )
+                         ],
+                         ),
+                         ),
+
+                      Text(widget.list[i]['date']),
+                     
+                      
+                            
+                                                 ],
+                                      )
+                            
+                                      ),
+
+
+
+
+
+
+
+
+
+
+                                      Row(
+                children: <Widget>[
+                  /// image Container
+                  
+                  Container(
+                  
+                    child: Image.network(
+                       "http://192.168.43.135/luckyblog/images/"+widget.list[i]['featured_image'],
+                    width: 150,
+                   
+                  ),
+                  ),
+
+                  
+              ],
+              ),
